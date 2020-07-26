@@ -16,3 +16,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/categories', 'CategoryController@index');
+$router->get('/categories/{id}', 'CategoryController@show');
+$router->post('/categories', 'CategoryController@create');
+$router->put('/categories/{id}', 'CategoryController@update');
+$router->delete('/categories/{id}', 'CategoryController@delete');
